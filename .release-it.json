@@ -1,13 +1,13 @@
 {
   "hooks": {
-    "after:bump": "auto-changelog -p"
+    "after:bump": "npx auto-changelog -p"
   },
   "git": {
     "commitMessage": "chore: release v${version}",
     "commit": true,
     "commitArgs": "",
     "addUntrackedFile": false,
-    "changelog": "auto-changelog --stdout --commit-limit false",
+    "changelog": "npx auto-changelog --stdout --commit-limit false --unreleased --template https://raw.githubusercontent.com/release-it/release-it/main/templates/changelog-compact.hbs",
     "requireCleanWorkingDir": false,
     "requireUpstream": false,
     "requireCommits": false,

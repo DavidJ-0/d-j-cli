@@ -1,12 +1,12 @@
 {
-  "name": "d-j-cli",
-  "version": "0.0.1",
+  "name": "david-j-cli",
+  "version": "0.0.7",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "runCode": "node index.js crt demo",
-    "release": "read -p 'GITHUB_TOKEN: ' GITHUB_TOKEN && export GITHUB_TOKEN=$GITHUB_TOKEN && release-it"
+    "release": "release-it"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@release-it/conventional-changelog": "^8.0.1",
+    "auto-changelog": "^2.4.0",
     "release-it": "^17.1.1"
   }
 }
