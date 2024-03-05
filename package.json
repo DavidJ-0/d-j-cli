@@ -1,12 +1,12 @@
 {
-  "name": "my-project",
-  "version": "1.0.0",
+  "name": "d-j-cli",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "runCode": "node index.js crt demo",
-    "release": "release-it"
+    "release": "read -p 'GITHUB_TOKEN: ' GITHUB_TOKEN && export GITHUB_TOKEN=$GITHUB_TOKEN && release-it"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +19,7 @@
     "ora": "^5.4.1"
   },
   "devDependencies": {
+    "@release-it/conventional-changelog": "^8.0.1",
     "release-it": "^17.1.1"
   }
 }

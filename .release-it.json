@@ -1,0 +1,39 @@
+{
+  "hooks": {
+    "after:bump": "auto-changelog -p"
+  },
+  "git": {
+    "commitMessage": "chore: release v${version}",
+    "commit": true,
+    "commitArgs": "",
+    "addUntrackedFile": false,
+    "changelog": "auto-changelog --stdout --commit-limit false",
+    "requireCleanWorkingDir": false,
+    "requireUpstream": false,
+    "requireCommits": false,
+    "tag": true,
+    "tagName": "${version}",
+    "tagArgs": "",
+    "tagAnnotation": "Release ${version}",
+    "push": true,
+    "pushArgs": "--follow-tags",
+    "pushRepo": "origin"
+  },
+  "github": {
+    "release": true
+  },
+  "npm": {
+    "publish": true,
+    "publishPath": ".",
+    "access": null,
+    "otp": null
+  },
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "preset": {
+        "name": "angular"
+      },
+      "infile": "CHANGELOG.md"
+    }
+  }
+}
